@@ -105,7 +105,86 @@ while ($nombre < 10) {##===> conditionnel test :
 $chiff = 1 ;//initialisation .
 do {
   echo $chiff++ ."<br>";// phase d'actualisation combinée à l'affichage .
-}while ($chiff < 10) ;// phase test conditionnel .
+}while ($chiff < 10) ;// phase test conditionnel .            
+
+// L'instruction "BREAK";
+## permet de sortir de la boucle là ou elle est placée. c'est une astuce developpeur qui permet de terminer rapidement une boucle sans achever l'itération courante.
+
+// ===> EXAMPLE:
+
+$table = [1, 2, 3, 4.5, 6];
+foreach($table as $v){
+  if (!is_int($v)){
+    break;
+  };
+  echo $v ;
+}
+echo "<br>";
+
+
+for($a = 1 ; $a <= 10 ; $a++) {
+  $d = 10 ;
+  do{
+    echo $d, '-', $a,' = ' , $d - $a , "\n" ;
+  $d--;
+    }while($d>$a);
+  echo  "<br>" ;
+}
+ echo  "<br>" ;
+ echo  "<br>" ;
+// EXERCICE  SUR LES BOUCLES :
+
+$notes = [] ;
+for ($e = 0 ; $e < 1000 ; $e++){
+  $notes[$e] = [] ;
+  for ($n = 0 ; $n < 8 ; $n++){
+    $notes[$e][$n] = random_int(0,20);
+  }
+}
+
+ echo  "<br>" ;
+//=======================================================
+
+
+$recu = 0 ;
+foreach ($notes as $e){
+  $moyenne = 0 ;
+  foreach ($e as $n){
+    $moyenne += $n ;
+  }
+  $moyenne = $moyenne/8 ;
+  if ($moyenne>= 10){
+    $recu++ ;
+  }
+}
+ echo $recu ;
+echo  "<br>" ;
+
+$s = 0 ;
+for($i = 12 ; $i < 20 ; $i += 2 ){
+  $s += $i ;
+}
+echo $s ;
+echo  "<br>" ;
+echo  "<br>" ;
+$t = 40 ;
+while($t> 0){
+  echo $t ,"\n";
+  $t -= 5 ;
+}
+echo  "<br>" ;
+
+$t = 40 ;
+while( $t > 0){
+  for($i = ($t - 10); $i < $t ; $i += 2 ){
+    echo $i -= 5 ;
+  }
+}
+
+
+
+
+
 
 
 
