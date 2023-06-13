@@ -37,13 +37,76 @@ foreach($tab as $val){
 }
 
 // Un tableau avec des nombres :
-$nunbers = [1, 2, 3, 4, 5];
+$numbers = [1, 2, 3, 4, 5];
 $somme = 0;
 
 foreach($numbers as $pos => $val) {
   $somme += $val;
 }
-echo $somme."<br>";
+echo $somme."<br><br>";
+
+// LES EXPRESSIONS BOOLEENNES :
+var_dump(true)."<br>"; // affiche "true";echo "<br>";
+var_dump(false). "<br>"; // affiche "false";echo "<br>";
+var_dump(2==1)."<br>"; 
+var_dump(2>1);
+var_dump(2!=1);
+echo "<br>";
+
+// LES BOUCLES "for":
+# Trois étapes caractérise les boucles "for":
+              //<< INITIALISATION>>
+              //<<CONDITION>>
+              //<<ACTUALISATION>>:
+for ($number =1 ; $number <10 ; $number++){
+  ##les trois phoses sont séparés par un point-virgule ";"
+  echo $number ;
+}
+echo "<br>";
+
+?>
+<h2>Les boucles "FOR" </h2>
+<?php
+
+for ($solde = 0 ; $solde < 100 ; $solde +=10) {
+  echo $solde."<br>";
+}
+echo "<br>";
+for ($decompte = 300 ; $decompte>100 ; $decompte-=20 ){
+  echo ($decompte)."<br>";
+}
+
+?>
+<h2> Les boucles "WHILE"</h2>
+<?php
+
+// les boucles "while" /
+
+// de la meme manière les boucles "while" possedent elles aussi les 3 phases :
+         // INITIALISATION : doit etre coder avant la boucle.
+         // CONDITION : while suivi (test conditionnel)
+         // ACTUALISATION : coder ds le corps de la boucle( l'oublie de cette               phase ammene a une boucle infinie)
+//=========> EXAMPLE :
+
+$nombre=1; ## initialisation avant la boucle
+while ($nombre < 10) {##===> conditionnel test :
+  echo $nombre."<br>";                    
+  $nombre++ ;## phase d'actualisation 
+}
+
+//============================================================================
+
+?>
+<h2> Les boucles "DO...WHILE"</h2>
+<?php
+
+//les boucles "DO...WHILE" sont similaires aux boucles "WHILE". La différence vient de l'emplacement du test conditionnel .Tandis que la boucle 'WHILE' effectue le test conditionnel au début , c'est-à-dire avant d'éxécuter le corps de la boucle,la boucle" Do..WHILE" effectue le test conditionnel à la fin, c'est à dire après avoir exécutée le corps de la boucle. Ainsi ,une boucle "WHILE" peut tout a fait ne jamais étre exécutée- dans le cas ou le test conditionnel est faux dès le départ alors qu'une boucle "DO..WHILE"nest ex&cutée au moins une fois  .
+## ===> EXAMPLE /
+$chiff = 1 ;//initialisation .
+do {
+  echo $chiff++ ."<br>";// phase d'actualisation combinée à l'affichage .
+}while ($chiff < 10) ;// phase test conditionnel .
+
 
 
 
